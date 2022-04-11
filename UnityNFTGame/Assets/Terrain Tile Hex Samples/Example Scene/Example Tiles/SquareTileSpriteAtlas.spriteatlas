@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: SquareTileSpriteAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 591295cd5f5d94941a03995981cb232c, type: 3}
+    - {fileID: 2800000, guid: ac3b9336e27c3f1458c6eb4f97a99718, type: 3}
+    - {fileID: 2800000, guid: a4b92a0441606bd499fbf36994da18b3, type: 3}
+    - {fileID: 2800000, guid: 87c7040ad207a684bac935f806313e07, type: 3}
+    - {fileID: 2800000, guid: 089ec694c2f50a748a5f490fa5616b5a, type: 3}
+    - {fileID: 2800000, guid: 3efcbae0e04ff3f489b733d0a82966d1, type: 3}
+    - {fileID: 2800000, guid: e2e66902c768ff34b9e8637f06b1a595, type: 3}
+    - {fileID: 2800000, guid: 655d1825cbe189d4d97a48fbae36bdbe, type: 3}
+    - {fileID: 2800000, guid: 65f97617738bdcf40b2c6a3cc6fed0e1, type: 3}
+    - {fileID: 2800000, guid: da3e6bbb84c179140bc2ea270b6958bd, type: 3}
+    - {fileID: 2800000, guid: 97c990d13571d614c9f638ee4e0a3473, type: 3}
+    - {fileID: 2800000, guid: 7ae31a8180ce39742905ed117198b940, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 3efcbae0e04ff3f489b733d0a82966d1, type: 3}
+  - {fileID: 21300000, guid: 7ae31a8180ce39742905ed117198b940, type: 3}
+  - {fileID: 21300000, guid: 97c990d13571d614c9f638ee4e0a3473, type: 3}
+  - {fileID: 21300000, guid: e2e66902c768ff34b9e8637f06b1a595, type: 3}
+  - {fileID: 21300000, guid: a4b92a0441606bd499fbf36994da18b3, type: 3}
+  - {fileID: 21300000, guid: 089ec694c2f50a748a5f490fa5616b5a, type: 3}
+  - {fileID: 21300000, guid: 655d1825cbe189d4d97a48fbae36bdbe, type: 3}
+  - {fileID: 21300000, guid: ac3b9336e27c3f1458c6eb4f97a99718, type: 3}
+  - {fileID: 21300000, guid: 65f97617738bdcf40b2c6a3cc6fed0e1, type: 3}
+  - {fileID: 21300000, guid: 87c7040ad207a684bac935f806313e07, type: 3}
+  - {fileID: 21300000, guid: da3e6bbb84c179140bc2ea270b6958bd, type: 3}
+  - {fileID: 21300000, guid: 591295cd5f5d94941a03995981cb232c, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - forestPineSnowCovered00
+  - volcanoActive00
+  - plains_castle00
+  - jungle00
+  - below_water00
+  - forestBroadleaf00
+  - mountain00
+  - below_dirt00
+  - oceanCalm00
+  - desertYellowCactiForest00
+  - plains00
+  - base00
+  m_RenderDataMap: {}
+  m_Tag: SquareTileSpriteAtlas
+  m_IsVariant: 0
