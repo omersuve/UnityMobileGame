@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Collider
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -41,6 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
+  - name: Collider
     uniqueID: 612184747
+    locked: 0
+  - name: Player
+    uniqueID: 409111113
+    locked: 0
+  - name: Enemy
+    uniqueID: 3578237459
     locked: 0
