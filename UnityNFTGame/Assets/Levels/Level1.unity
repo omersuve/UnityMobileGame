@@ -757,7 +757,7 @@ MonoBehaviour:
   target: {fileID: 447356211}
   enemyPrefab: {fileID: 6453223113048929347, guid: f78e18da820188e42a92b7e8c4710acb,
     type: 3}
-  speed: 400
+  speed: 100
   nextWaypointDistance: 3
 --- !u!114 &243508275
 MonoBehaviour:
@@ -1584,7 +1584,7 @@ MonoBehaviour:
   manualDebugFloorRoof: 0
   showSearchTree: 0
   unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
+  logPathResults: 0
   maxNearestNodeDistance: 100
   scanOnStartup: 1
   fullGetNearestSearch: 0
@@ -1603,7 +1603,7 @@ MonoBehaviour:
   heuristic: 2
   heuristicScale: 1
   threadCount: 1
-  maxFrameTime: 1
+  maxFrameTime: 10
   batchGraphUpdates: 0
   graphUpdateBatchingInterval: 0.2
   euclideanEmbedding:
@@ -2625,7 +2625,7 @@ MonoBehaviour:
   target: {fileID: 447356211}
   enemyPrefab: {fileID: 6453223113048929347, guid: f78e18da820188e42a92b7e8c4710acb,
     type: 3}
-  speed: 400
+  speed: 100
   nextWaypointDistance: 3
 --- !u!114 &1146484391
 MonoBehaviour:
@@ -3112,7 +3112,7 @@ MonoBehaviour:
   target: {fileID: 447356211}
   enemyPrefab: {fileID: 6453223113048929347, guid: f78e18da820188e42a92b7e8c4710acb,
     type: 3}
-  speed: 400
+  speed: 100
   nextWaypointDistance: 3
 --- !u!114 &1424509978
 MonoBehaviour:
@@ -3729,7 +3729,7 @@ MonoBehaviour:
   target: {fileID: 447356211}
   enemyPrefab: {fileID: 6453223113048929347, guid: f78e18da820188e42a92b7e8c4710acb,
     type: 3}
-  speed: 400
+  speed: 100
   nextWaypointDistance: 3
 --- !u!114 &1689394919
 MonoBehaviour:
@@ -4450,7 +4450,7 @@ MonoBehaviour:
   target: {fileID: 447356211}
   enemyPrefab: {fileID: 6453223113048929347, guid: f78e18da820188e42a92b7e8c4710acb,
     type: 3}
-  speed: 400
+  speed: 100
   nextWaypointDistance: 3
 --- !u!114 &1901753370
 MonoBehaviour:

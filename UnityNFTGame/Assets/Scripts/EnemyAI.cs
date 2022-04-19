@@ -24,7 +24,10 @@ public class EnemyAI : MonoBehaviour
     {
         Instantiate(enemyPrefab, transform.position, Quaternion.identity);
 
-        enemy = GameObject.FindWithTag("Enemy");
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
+
+        Debug.Log(enemy);
+
         seeker = GetComponent<Seeker>();
         rb = enemy.GetComponent<Rigidbody2D>();
 
@@ -49,7 +52,7 @@ public class EnemyAI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!IsDestroyed(enemy))
         {
@@ -74,13 +77,14 @@ public class EnemyAI : MonoBehaviour
         }
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+
         Vector2 force = direction * speed * Time.deltaTime;
 
         rb.AddForce(force);
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
-        if (distance > nextWaypointDistance)
+        if (distance < nextWaypointDistance)
         {
             currentWaypoint++;
         }
