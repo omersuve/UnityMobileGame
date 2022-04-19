@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
-public class EnemyAI : MonoBehaviour
+public class EnemyAI3 : MonoBehaviour
 {
     public Transform target;
     public GameObject enemyPrefab;
@@ -23,7 +23,7 @@ public class EnemyAI : MonoBehaviour
     {
         Instantiate(enemyPrefab, transform.position, Quaternion.identity);
 
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
+        enemy = GameObject.FindGameObjectWithTag("Enemy3");
 
         Debug.Log(enemy);
 
