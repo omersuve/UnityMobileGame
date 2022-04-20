@@ -53,26 +53,26 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 97c990d13571d614c9f638ee4e0a3473, type: 3}
   - {fileID: 21300000, guid: e2e66902c768ff34b9e8637f06b1a595, type: 3}
   - {fileID: 21300000, guid: a4b92a0441606bd499fbf36994da18b3, type: 3}
-  - {fileID: 21300000, guid: 089ec694c2f50a748a5f490fa5616b5a, type: 3}
+  - {fileID: 8225845982762018734, guid: 089ec694c2f50a748a5f490fa5616b5a, type: 3}
   - {fileID: 21300000, guid: 655d1825cbe189d4d97a48fbae36bdbe, type: 3}
   - {fileID: 21300000, guid: ac3b9336e27c3f1458c6eb4f97a99718, type: 3}
-  - {fileID: 21300000, guid: 65f97617738bdcf40b2c6a3cc6fed0e1, type: 3}
+  - {fileID: 7121582790244549266, guid: 65f97617738bdcf40b2c6a3cc6fed0e1, type: 3}
   - {fileID: 21300000, guid: 87c7040ad207a684bac935f806313e07, type: 3}
-  - {fileID: 21300000, guid: da3e6bbb84c179140bc2ea270b6958bd, type: 3}
-  - {fileID: 21300000, guid: 591295cd5f5d94941a03995981cb232c, type: 3}
+  - {fileID: -8120024755460364171, guid: da3e6bbb84c179140bc2ea270b6958bd, type: 3}
+  - {fileID: -8265189628845604273, guid: 591295cd5f5d94941a03995981cb232c, type: 3}
   m_PackedSpriteNamesToIndex:
   - forestPineSnowCovered00
   - volcanoActive00
   - plains_castle00
   - jungle00
   - below_water00
-  - forestBroadleaf00
+  - forestBroadleaf00_0
   - mountain00
   - below_dirt00
-  - oceanCalm00
+  - oceanCalm00_0
   - desertYellowCactiForest00
-  - plains00
-  - base00
+  - plains00_0
+  - base00_0
   m_RenderDataMap: {}
   m_Tag: SquareTileSpriteAtlas
   m_IsVariant: 0

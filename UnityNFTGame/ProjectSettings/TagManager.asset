@@ -19,7 +19,7 @@ TagManager:
   - UI
   - Collider
   - Enemy
-  - 
+  - Mountain
   - 
   - 
   - 
@@ -55,4 +55,7 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 3578237459
+    locked: 0
+  - name: Mountain
+    uniqueID: 886921841
     locked: 0
