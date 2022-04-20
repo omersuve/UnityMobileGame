@@ -77,6 +77,10 @@ public class EnemyAI2 : MonoBehaviour
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
 
+        Vector2 directionRotation = (Vector2)target.position - rb.position;
+        float angle = Mathf.Atan2(directionRotation.y, directionRotation.x) * Mathf.Rad2Deg - 90f;
+        rb.rotation = angle;
+
         Vector2 force = direction * speed * Time.deltaTime;
 
         rb.AddForce(force);
