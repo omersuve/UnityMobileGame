@@ -20,7 +20,7 @@ TagManager:
   - Collider
   - Enemy
   - Mountain
-  - 
+  - Bullet
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: Enemy
     uniqueID: 3578237459
+    locked: 0
+  - name: Bullet
+    uniqueID: 2878867193
     locked: 0
   - name: Mountain
     uniqueID: 886921841
