@@ -41,7 +41,7 @@ public class ChangeInput : MonoBehaviour
         {
             submitButton.onClick.Invoke();
             Debug.Log("Button Pressed!");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
