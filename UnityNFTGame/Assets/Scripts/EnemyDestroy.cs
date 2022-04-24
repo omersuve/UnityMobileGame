@@ -9,6 +9,7 @@ public class EnemyDestroy : MonoBehaviour
         if (collision.gameObject.CompareTag("Bullet"))
         {
             Destroy(gameObject);
+            ScoreScript.scoreValue += 1;
         }
     }
 }
