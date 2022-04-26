@@ -23,9 +23,9 @@ public class ScoreScript : MonoBehaviour
         score.text = "Score: " + scoreValue;
         if(scoreValue >= 5)
         {
-            scoreValue = 0;
             GameManager.GetComponent<GameScript>().GameOver();
             this.enabled = false;
+            scoreValue = 0;
         }
     }
 }

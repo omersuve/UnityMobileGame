@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using PlayFab;
 using PlayFab.ClientModels;
+using UnityEngine.SceneManagement;
+
 
 public class PlayFabManager : MonoBehaviour
 {
@@ -67,12 +69,14 @@ public class PlayFabManager : MonoBehaviour
     void OnRegisterSuccess(RegisterPlayFabUserResult result)
     {
         messageText.text = "Registered and logged in!";
+        SceneManager.LoadScene("Level1");
         Debug.Log("Registered and logged in!");
     }
 
     void OnLoginSuccess(LoginResult result)
     {
         messageText.text = "Successfully logged in!";
+        SceneManager.LoadScene("Level1");
         Debug.Log("Successfully logged in!");
     }
 
@@ -86,26 +90,5 @@ public class PlayFabManager : MonoBehaviour
     {
         Debug.Log(error.ErrorMessage);
         Debug.Log(error.GenerateErrorReport());
-    }
-
-    public void SendLeaderboard(int score)
-    {
-        var request = new UpdatePlayerStatisticsRequest
-        {
-            Statistics = new List<StatisticUpdate>
-            {
-                new StatisticUpdate
-                {
-                    StatisticName = "GameScore",
-                    Value = score
-                }
-            }
-        };
-        PlayFabClientAPI.UpdatePlayerStatistics(request, OnLeaderboardUpdate, OnError);
-    }
-
-    void OnLeaderboardUpdate(UpdatePlayerStatisticsResult result)
-    {
-        Debug.Log("Successfully leaderboard sent!");
     }
 }
