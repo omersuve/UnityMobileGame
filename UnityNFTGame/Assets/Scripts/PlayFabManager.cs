@@ -69,14 +69,14 @@ public class PlayFabManager : MonoBehaviour
     void OnRegisterSuccess(RegisterPlayFabUserResult result)
     {
         messageText.text = "Registered and logged in!";
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Menu");
         Debug.Log("Registered and logged in!");
     }
 
     void OnLoginSuccess(LoginResult result)
     {
         messageText.text = "Successfully logged in!";
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Menu");
         Debug.Log("Successfully logged in!");
     }
 
