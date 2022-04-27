@@ -4,6 +4,7 @@ using UnityEngine;
 using PlayFab;
 using PlayFab.ClientModels;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class PlayfabScoreboard : MonoBehaviour
@@ -11,12 +12,18 @@ public class PlayfabScoreboard : MonoBehaviour
     [Header("UI")]
     public GameObject rowPrefab;
     public Transform rowsParent;
-    public Button getLeaderboardButton;
+    public Button getBackButton;
 
     private void Start()
     {
-        Button btnGetLeaderboard = getLeaderboardButton.GetComponent<Button>();
-        btnGetLeaderboard.onClick.AddListener(GetLeaderboard);
+        Button btnGetBack = getBackButton.GetComponent<Button>();
+        btnGetBack.onClick.AddListener(GetBack);
+        GetLeaderboard();
+    }
+
+    public void GetBack()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     public void GetLeaderboard()
@@ -25,7 +32,7 @@ public class PlayfabScoreboard : MonoBehaviour
         {
             StatisticName = "GameScore",
             StartPosition = 0,
-            MaxResultsCount = 3
+            MaxResultsCount = 6
         };
         PlayFabClientAPI.GetLeaderboard(request, OnLeaderboardGet, OnError);
     }
@@ -44,7 +51,7 @@ public class PlayfabScoreboard : MonoBehaviour
             GameObject newGo = Instantiate(rowPrefab, rowsParent);
             Text[] texts = newGo.GetComponentsInChildren<Text>();
             texts[0].text = (item.Position + 1).ToString();
-            texts[1].text = item.PlayFabId;
+            texts[1].text = item.DisplayName;
             texts[2].text = item.StatValue.ToString();
 
             Debug.Log(string.Format("PLACE: {0} | ID: {1} | VALUE: {2}",

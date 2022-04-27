@@ -61,22 +61,32 @@ public class PlayFabManager : MonoBehaviour
         var request = new LoginWithEmailAddressRequest
         {
             Email = emailInput.text,
-            Password = passwordInput.text
+            Password = passwordInput.text,
+            InfoRequestParameters = new GetPlayerCombinedInfoRequestParams
+            {
+                GetPlayerProfile = true
+            }
         };
         PlayFabClientAPI.LoginWithEmailAddress(request, OnLoginSuccess, OnError);
     }
 
     void OnRegisterSuccess(RegisterPlayFabUserResult result)
     {
-        messageText.text = "Registered and logged in!";
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("DisplayName");
         Debug.Log("Registered and logged in!");
     }
 
     void OnLoginSuccess(LoginResult result)
     {
-        messageText.text = "Successfully logged in!";
-        SceneManager.LoadScene("Menu");
+        string name = null;
+        if (result.InfoResultPayload.PlayerProfile != null)
+            name = result.InfoResultPayload.PlayerProfile.DisplayName;
+
+        if(name == null)
+            SceneManager.LoadScene("DisplayName");
+        else
+            SceneManager.LoadScene("Menu");
+
         Debug.Log("Successfully logged in!");
     }
 
