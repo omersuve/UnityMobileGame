@@ -5,8 +5,7 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
-    public Transform target;
-    public GameObject enemyPrefab;
+    private Transform target;
 
     public float speed = 200f;
     public float nextWaypointDistance = 3f;
@@ -17,25 +16,19 @@ public class EnemyAI : MonoBehaviour
 
     Seeker seeker;
     Rigidbody2D rb;
-    GameObject enemy;
 
     void Start()
     {
-        Instantiate(enemyPrefab, transform.position, Quaternion.identity);
-
-        enemy = GameObject.FindGameObjectWithTag("Enemy");
-
-        Debug.Log(enemy);
-
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();  
         seeker = GetComponent<Seeker>();
-        rb = enemy.GetComponent<Rigidbody2D>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
 
         InvokeRepeating("UpdatePath", 0f, .5f);
     }
 
     void UpdatePath()
     {
-        if (seeker.IsDone() && !IsDestroyed(enemy))
+        if (seeker.IsDone() && !IsDestroyed(gameObject))
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         }
@@ -53,7 +46,7 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!IsDestroyed(enemy))
+        if (!IsDestroyed(gameObject))
         {
             UpdateUntilDestroyed();
         }

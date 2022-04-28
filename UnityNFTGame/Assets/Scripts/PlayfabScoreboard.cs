@@ -32,7 +32,7 @@ public class PlayfabScoreboard : MonoBehaviour
         {
             StatisticName = "GameScore",
             StartPosition = 0,
-            MaxResultsCount = 6
+            MaxResultsCount = 8
         };
         PlayFabClientAPI.GetLeaderboard(request, OnLeaderboardGet, OnError);
     }
