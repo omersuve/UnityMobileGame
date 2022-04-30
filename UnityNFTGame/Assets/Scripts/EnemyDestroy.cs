@@ -5,9 +5,9 @@ using UnityEngine;
 public class EnemyDestroy : MonoBehaviour
 {
     public int enemyHealth;
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.CompareTag("Bullet"))
+        if (collider.gameObject.CompareTag("Bullet"))
         {
             gameObject.GetComponent<Rigidbody2D>().velocity /= 8;
             if (enemyHealth <= 0)
