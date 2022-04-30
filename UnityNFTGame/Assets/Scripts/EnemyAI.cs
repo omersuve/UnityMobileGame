@@ -76,7 +76,14 @@ public class EnemyAI : MonoBehaviour
 
         Vector2 force = direction * speed * Time.deltaTime;
 
-        rb.AddForce(force);
+        if(Mathf.Abs(directionRotation.x) < 8 && Mathf.Abs(directionRotation.y) < 8)
+        {
+            rb.AddForce(new Vector2(0, 0));
+        }
+        else
+        {
+            rb.AddForce(force);
+        }
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 

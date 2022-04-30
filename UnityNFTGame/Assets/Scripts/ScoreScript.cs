@@ -21,7 +21,7 @@ public class ScoreScript : MonoBehaviour
     void Update()
     {
         score.text = "Score: " + scoreValue;
-        if(scoreValue >= 10)
+        if(scoreValue >= 100)
         {
             GameManager.GetComponent<GameScript>().GameOver();
             this.enabled = false;
