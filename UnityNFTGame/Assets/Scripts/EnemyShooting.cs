@@ -6,13 +6,14 @@ public class EnemyShooting : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public int waitTime;
     float timer = 0;
 
     public float bulletForce = 20f;
 
     void Update()
     {
-        Shoot(2);
+        Shoot(waitTime);
     }
 
     void Shoot(int waitTime)
