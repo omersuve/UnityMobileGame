@@ -24,7 +24,9 @@ public class PlayerHealth : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "BulletEnemy")
-            TakeDamage(20);
+        if (col.gameObject.tag == "BulletEnemy1")
+            TakeDamage(15);
+        if (col.gameObject.tag == "BulletEnemy2")
+            TakeDamage(75);
     }
 }

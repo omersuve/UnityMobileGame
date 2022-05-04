@@ -206,7 +206,7 @@ MonoBehaviour:
   firePoint: {fileID: 8905742184558642350}
   bulletPrefab: {fileID: 8009275579855024836, guid: 72349642fb4504a42a4eb1d5d6ced896,
     type: 3}
-  waitTime: 2
+  avgWaitTime: 4
   bulletForce: 10
 --- !u!1 &8266602515588515079
 GameObject:

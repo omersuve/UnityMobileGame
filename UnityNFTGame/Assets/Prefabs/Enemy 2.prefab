@@ -189,7 +189,7 @@ MonoBehaviour:
   firePoint: {fileID: 757851279160875904}
   bulletPrefab: {fileID: 8875441543966385050, guid: 7ce8f5b0afd8f1348b33eddef6552d49,
     type: 3}
-  waitTime: 10
+  avgWaitTime: 8
   bulletForce: 8
 --- !u!50 &2710869897891953645
 Rigidbody2D:

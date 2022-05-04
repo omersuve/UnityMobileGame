@@ -76,7 +76,7 @@ public class Enemy2AI : MonoBehaviour
 
         Vector2 force = direction * speed * Time.deltaTime;
 
-        if (Mathf.Abs(directionRotation.x) < 15 && Mathf.Abs(directionRotation.y) < 15)
+        if (Mathf.Abs(directionRotation.x) < 13 && Mathf.Abs(directionRotation.y) < 13)
         {
             rb.AddForce(new Vector2(0, 0));
         }

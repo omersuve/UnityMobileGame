@@ -1,33 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class EnemyShooting : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    public int waitTime;
-    float timer = 0;
-
+    public float avgWaitTime;
     public float bulletForce = 20f;
+    
+    float timer = 0;
+    bool shooted = false;
+    double wait = 3;
+    
+    System.Random rand = new System.Random();
 
     void Update()
     {
-        Shoot(waitTime);
-    }
+        if (shooted)
+        {
+            wait = calculateWaitingTime(avgWaitTime);
+            shooted = false;
+        }
 
-    void Shoot(int waitTime)
-    {
-        if(timer > waitTime)
+        if (timer > wait)
         {
             timer = 0;
             GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
             rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+            shooted = true;
         }
         else
         {
             timer += Time.deltaTime;
         }
+    }
+
+    double calculateWaitingTime(double avgWaitTime)
+    {
+        double u1 = 1.0 - rand.NextDouble();
+        double u2 = 1.0 - rand.NextDouble();
+        double randStdNormal = Math.Sqrt(-2.0 * Math.Log(u1)) * Math.Sin(2.0 * Math.PI * u2);
+        double randNormal = avgWaitTime + 1.5 * randStdNormal;
+        print("randNormal: " + randNormal.ToString());
+        return randNormal;
     }
 }
