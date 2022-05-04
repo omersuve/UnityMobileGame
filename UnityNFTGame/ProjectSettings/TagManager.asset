@@ -8,7 +8,7 @@ TagManager:
   - BulletEnemy2
   - BulletEnemy1
   - BulletPlayer
-  - BulletEnemy
+  - Ocean
   layers:
   - Default
   - TransparentFX
@@ -20,10 +20,10 @@ TagManager:
   - Enemy
   - Mountain
   - Bullet
-  - 
-  - 
-  - 
-  - 
+  - Plain
+  - Ocean
+  - Forest
+  - Ground
   - 
   - 
   - 

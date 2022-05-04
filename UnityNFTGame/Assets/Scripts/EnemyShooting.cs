@@ -13,8 +13,15 @@ public class EnemyShooting : MonoBehaviour
     float timer = 0;
     bool shooted = false;
     double wait = 3;
-    
+    private Transform target;
+    string[] layers = new string[] {"Mountain", "Forest"};
+
     System.Random rand = new System.Random();
+
+    private void Start()
+    {
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+    }
 
     void Update()
     {
@@ -26,11 +33,15 @@ public class EnemyShooting : MonoBehaviour
 
         if (timer > wait)
         {
-            timer = 0;
-            GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
-            shooted = true;
+            int environment = LayerMask.GetMask(layers);
+            if (!Physics2D.Linecast(transform.position, target.transform.position, environment))
+            {
+                timer = 0;
+                GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+                rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+                shooted = true;
+            }
         }
         else
         {

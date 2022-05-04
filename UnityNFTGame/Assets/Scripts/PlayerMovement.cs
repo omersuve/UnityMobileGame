@@ -46,13 +46,13 @@ public class PlayerMovement : MonoBehaviour
             transform.Translate(movement.x * Time.deltaTime, 0, 0);
         }
 
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, movement.y), Mathf.Abs(movement.y * Time.deltaTime), LayerMask.GetMask("Player", "Collider"));
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(0, movement.y), Mathf.Abs(movement.y * Time.deltaTime), LayerMask.GetMask("Player", "Mountain"));
         if (hit.collider == null)
         {
             transform.Translate(0, movement.y * Time.deltaTime, 0);
         }
 
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(movement.x, 0), Mathf.Abs(movement.x * Time.deltaTime), LayerMask.GetMask("Player", "Collider"));
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size, 0, new Vector2(movement.x, 0), Mathf.Abs(movement.x * Time.deltaTime), LayerMask.GetMask("Player", "Mountain"));
         if (hit.collider == null)
         {
             transform.Translate(movement.x * Time.deltaTime, 0, 0);

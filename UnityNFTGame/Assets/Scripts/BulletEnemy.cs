@@ -18,7 +18,11 @@ public class BulletEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag != "BulletPlayer" && collider.gameObject.tag != "Enemy" && collider.gameObject.tag != "BulletEnemy1" && collider.gameObject.tag != "BulletEnemy2")
+        if (collider.gameObject.tag != "BulletPlayer" && 
+            collider.gameObject.tag != "Enemy" && 
+            collider.gameObject.tag != "BulletEnemy1" && 
+            collider.gameObject.tag != "BulletEnemy2" &&
+            collider.gameObject.tag != "Ocean")
         {
             GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
             Destroy(effect, 0.4f);
